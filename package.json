@@ -5,10 +5,10 @@
     "ng": "ng",
     "start": "ng serve -o --host 0.0.0.0",
     "build": "ng build --prod",
-    "build:git": "ng build --prod --base-href=https://anthonykuong.github.io/COVID-19-Dashboard/",
+    "build:git": "node --max_old_space_size=12192 node_modules/@angular/cli/bin/ng build --prod --base-href=https://anthonykuong.github.io/COVID-19-Dashboard/",
     "build:web": "node --max_old_space_size=12192 node_modules/@angular/cli/bin/ng build",
-    "deploy:full": "ng deploy --base-href=/the-repositoryname/",
-    "deploy:no-build" : "ng deploy --no-build",
+    "deploy:full": "ng deploy --base-href=/COVID-19-Dashboard/",
+    "deploy:no-build" : "ng deploy --no-build --base-href=/COVID-19-Dashboard/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

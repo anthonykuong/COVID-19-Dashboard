@@ -4,6 +4,9 @@ App available here - https://igniteui.github.io/COVID-19-Dashboard/
 
 This project was generated with [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) version 5.0.1.
 
+## Instructions
+Run `npm install`
+
 ## Development server
 
 Run `ig start` to build the application, start a web server and open the application in the default browser. Then navigate to `http://localhost:4200/`. Default serving port can be configured in `ignite-ui-cli.json` via `defaultPort` property.

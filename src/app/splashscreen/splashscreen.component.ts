@@ -7,5 +7,6 @@ import {Component} from '@angular/core';
 })
 
 export class SplashscreenComponent {
+  title='Anthony Ku Ong is watching the Coronavirus COVID-19 Global Cases';
   constructor() { }
 }

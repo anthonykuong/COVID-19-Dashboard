@@ -191,19 +191,6 @@ export class RemoteDataService {
           }
       }
 
-      // aggregate list based on country
-      // const result = locations.reduce((prev, item) => {
-      //     const newItem = prev.find((i) => {
-      //         return i.country === item.country;
-      //     });
-      //     if (newItem) {
-      //         newItem.value += item.value;
-      //     } else {
-      //         prev.push(item);
-      //     }
-      //     return prev;
-      // }, []);
-
       data = locations.sort((a, b) => {
         return b.value - a.value;
       });

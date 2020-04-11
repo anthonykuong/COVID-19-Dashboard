@@ -4,20 +4,20 @@
   "newProjectRoot": "projects",
   "projects": {
     "covid-19-dashboard": {
-    "projectType": "application",
-    "schematics": {
-      "@schematics/angular:component": {
-      "style": "scss"
-      }
-    },
-    "root": "",
-    "sourceRoot": "src",
-    "prefix": "app",
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,13 +30,15 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["./node_modules/hammerjs/hammer.min.js"],
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ],
             "es5BrowserSupport": true,
             "webWorkerTsConfig": "tsconfig.worker.json"
           },
           "configurations": {
             "es5": {
-                "tsConfig": "tsconfig-es5.app.json"
+              "tsConfig": "tsconfig-es5.app.json"
             },
             "production": {
               "fileReplacements": [
@@ -79,7 +81,7 @@
               "browserTarget": "covid-19-dashboard:build:production"
             },
             "es5": {
-                "browserTarget": "covid-19-dashboard:build:es5"
+              "browserTarget": "covid-19-dashboard:build:es5"
             }
           }
         },
@@ -99,7 +101,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["./node_modules/hammerjs/hammer.min.js"],
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ],
             "assets": [
               "src/assets/ignite-ui-logo-2019/ignite-ui-logo-2019-icon-light-background.svg",
               "src/assets"
@@ -130,6 +134,10 @@
               "devServerTarget": "covid-19-dashboard:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

@@ -5,7 +5,10 @@
     "ng": "ng",
     "start": "ng serve -o --host 0.0.0.0",
     "build": "ng build --prod",
+    "build:git": "ng build --prod --base-href=https://anthonykuong.github.io/COVID-19-Dashboard/",
     "build:web": "node --max_old_space_size=12192 node_modules/@angular/cli/bin/ng build",
+    "deploy:full": "ng deploy --base-href=/the-repositoryname/",
+    "deploy:no-build" : "ng deploy --no-build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -43,6 +46,7 @@
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^5.1.2",
     "igniteui-cli": "~5.0.1",
     "include-media": "^1.4.9",
